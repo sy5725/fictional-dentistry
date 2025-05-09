@@ -842,13 +842,13 @@ sp-nav(ナビ)
         left: 30px;
     }
 
-    .heading {
+    .heading, .heading2 {
         padding-top: 60px;
         padding-bottom: 10px;
         margin-bottom: 35px;
     }
 
-    .heading::after{
+    .heading::after, .heading2::after {
         width: 38px;
     }
 
