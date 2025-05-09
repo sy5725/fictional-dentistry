@@ -1,0 +1,1491 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color:#111;
+    padding-top: 90px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul,
+li {
+   list-style: none;
+}
+
+.container {
+    width: 100%;
+}
+
+/* HEADER
+------------------------ */
+
+header {
+    background-color: white;
+    width: 100%;
+    top: 0;
+    height: 90px;
+    padding: 20px;
+    position: fixed;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-wrapper h1 {
+    display: block;
+}
+
+.header__logo {
+    display: block;
+    font-size: 0;
+    width: 272px;
+    height: 60px;
+    margin-top: -8px;
+}
+
+.header__logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.sp-nav {
+    flex: 1; /* ナビゲーションが残りのスペースを占める */
+}
+
+.main-nav a {
+    color:#111;
+    margin: 0 25px;
+    font-weight: 700;
+}
+
+.main-nav a:hover {
+    color: #0bd;
+}
+
+.nav-btn {
+    margin-left: 30px;
+}
+
+.main-nav span {
+    background:#fbc;
+    color:#fff;
+    padding: 15px 20px;
+    line-height: 1;
+    border-radius: 3px;
+}
+
+.main-nav span:hover {
+    background: rgb(195, 135, 150);
+}
+
+/* HOME
+--------------------------- */
+
+.home-content {
+    background-image: url(../images/mainvisual.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+}
+
+.home-content h2 {
+    font-size: 3.25rem;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: normal;
+    position: absolute;
+    letter-spacing: .2rem;
+    background-color: #fff;
+    text-box-trim: trim-both;
+}
+
+.first {
+    top: 260px;
+    left: 15%;
+}
+
+.first span {
+    color: #50D5E0;
+}
+
+.second {
+    top: 350px;
+    left: 15%;
+}
+
+.second span {
+    color: #EDB0BF;
+}
+
+.heading {
+    padding: 80px 0 20px;
+    margin-bottom: 55px;
+    font-size: 1.25rem;
+    font-family: 'Noto Serif JP', serif;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    position: relative;
+}
+
+.heading::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    display: inline-block;
+    width: 63px;
+    height: 2px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);/*位置調整*/
+    background-color: #50D5E0;
+}
+
+.features {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 110px;
+    padding: 0 2%;
+}
+
+.features-one img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.text-contents {
+    padding: 15px 0 0 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.policy-wrapper {
+    background-color: #E9F9FA;
+    padding: 0 2%;
+}
+
+.policy {
+    height: 400px;
+}
+
+.policy .image {
+    width: 24.375rem;
+}
+
+.policy b {
+    font-weight: bold;
+    font-size: 1.688rem;
+    position: relative;
+    top: 50px;
+}
+
+.policy p {
+    position: relative;
+    top: 80px;
+}
+
+.notice-item {
+    margin-top: 0px;
+    padding: 0;
+}
+
+.notice span {
+    position: relative;
+    left: 11%;
+    top: 30px;
+    background-color: #50D5E0;
+    color: #fff;
+    padding: 0px 16px;
+    font-size: 1.063rem;
+}
+
+.notice-text {
+    margin: 0px 26%;
+}
+
+.notice-hr {
+    border-style: solid;
+    margin: 40px -31.5% 0;
+    color: #DCDCDC;
+}
+
+.notice-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px 11% 0 0;
+    clear: both;
+}
+
+.notice a {
+    text-decoration: underline;
+    color: #000;
+}
+
+.notice a:hover {
+    color: #0bd;
+}
+
+footer {
+    text-align: center;
+}
+
+.home-footer .logo {
+    display: block;
+    margin: 200px auto 35px;
+}
+
+.home-footer .footer-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav a{
+    margin: 25px 0.938rem;
+    font-weight: bold;
+    color: #111;
+}
+
+.footer-nav a:hover {
+    color: #0bd;
+}
+
+.sns {
+    margin: 50px 0 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.sns-icon {
+    margin: 0 1.563rem;
+}
+
+.sns img {
+    width: 30px;
+}
+
+footer p {
+    background-color: #E9F9FA;
+    padding: 10px 0;
+}
+
+/* 診療案内 */
+.information-content {
+    background-image: url(../images/mainvisual2.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 356px;
+    position: relative;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.information-content h1 {
+    font-size: 1.719rem;
+    background: #fff;
+    position: absolute; 
+    top: 151px;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    padding: 5px 50px;
+    font-weight: 600;
+}
+
+.information-content p {
+    font-size: 0.813rem;
+    color: #fff;
+    background: #50D5E0;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    padding: 0 37.5px;
+    font-weight: 600;
+}
+
+.breadcrumb {
+    margin: 0 0 0 40px;
+    padding: 0;
+    list-style: none;
+    font-size: 0.875rem;
+    position: relative;
+    top: 30px;
+  }
+  
+  .breadcrumb li {
+    display: inline;/*横に並ぶように*/
+    list-style: none;
+  }
+  
+  .breadcrumb li:after {/* >を表示*/
+    content: '>';
+  }
+  
+  .breadcrumb li:last-child:after {
+    content: '';
+  }
+  
+  .breadcrumb li a {
+    text-decoration: none;
+    color: #111;
+  }
+  
+  .breadcrumb li a:hover {
+    text-decoration: underline;
+  }
+
+.list {
+    text-align: center;
+  }
+
+.list li {
+    display: inline-block;
+    padding: 25px 100px;
+    margin: 100px 20px 0;
+    background-color: #E9F9FA;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+.list li::before {
+    content: "▶";
+    color: #B4E7EB;
+    font-size: 0.75rem;
+    position: relative;
+    right: 15px;
+}
+
+.toothdecay {
+    padding: 0 2%;
+}
+
+.toothdecay .right {
+    width: 26.375rem;
+}
+
+.toothdecay .image {
+    width: 26.375rem;
+}
+
+.toothdecay b {
+    font-weight: bold;
+    font-size: 1.688rem;
+    position: relative;
+    top: 30px;
+}
+
+.toothdecay p {
+    position: relative;
+    top: 60px;
+}
+
+.periodontaldisease {
+    padding: 0 2%;
+}
+
+.periodontaldisease .left {
+    width: 26.375rem;
+}
+
+.periodontaldisease b {
+    font-weight: bold;
+    font-size: 1.688rem;
+}
+
+.periodontaldisease p {
+    position: relative;
+    top: 30px;
+}
+
+.periodontaldisease .image {
+    width: 26.375rem;
+}
+
+.footer2 .logo {
+    margin: 200px 0 30px;
+}
+
+.footer2 .footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* アクセス・診療時間　*/
+.access-content {
+    background-image: url(../images/mainvisual3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 356px;
+    position: relative;
+    font-family: 'Noto Serif JP', serif;
+}
+
+.access-content h1 {
+    font-size: 1.719rem;
+    background: #fff;
+    position: absolute; 
+    top: 151px;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    padding: 5px 25px;
+    font-weight: 600; 
+    text-align: center;
+}
+
+.access-content p {
+    font-size: 0.813rem;
+    color: #fff;
+    background: #50D5E0;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    padding: 0 56.5px;
+    text-align: center;
+}
+
+.access {
+    gap: 60px;
+    padding: 0 2%;
+}
+
+.access .image {
+    width: 422px;
+}
+
+.access .right {
+    width: 30rem;
+}
+
+.access b {
+    font-weight: 700;
+    font-size: 1.375rem;
+}
+
+.access p {
+    margin-bottom: 50px;
+    position: relative;
+    top: 10px;
+}
+
+.location-map {
+    text-align: center;
+    margin: 80px auto 0;
+    padding: 0 2%;
+}
+
+iframe {
+    width: 69.813rem;
+    height: 25.125rem;
+    max-width: 100%;
+}
+
+.consultationhours-wrapper {
+    padding: 0 2%;
+}
+
+.horizontal {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    border-collapse: collapse;
+    font-weight: 500;
+    max-width: auto;
+}
+
+.horizontal th {
+    background-color: #E9F9FA;
+    padding: 20px 3.5vw;
+} 
+
+.horizontal .time {
+    padding: 20px 6.5vw;
+}
+
+.horizontal td {
+    border: solid 1px #E9F9FA;
+    background-color: #F5FDFE;
+    color: #6DB1B7;
+    font-size: 1.5rem;
+}
+
+
+/* WEB予約　*/
+.reservation-content {
+    background-image: url(../images/mainvisual4.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 356px;
+    position: relative;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 600;
+}
+
+.reservation-content h1 {
+    font-size: 1.719rem;
+    background: #fff;
+    position: absolute; 
+    top: 151px;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    padding: 5px 48px; 
+}
+
+.reservation-content p {
+    font-size: 0.813rem;
+    color: #fff;
+    background: #50D5E0;
+    position: absolute;
+    top: 190px;
+    left: 50%;
+    -webkit-transform : translate(-50%,-50%);
+    transform : translate(-50%,-50%);
+    padding: 0 49px;
+}
+
+.inquiry-wrapper {
+    text-align: center;
+    padding: 0 7%;
+}
+
+.inquiry-wrapper h2 {
+    letter-spacing: 0;
+}
+
+.inquiry-wrapper .heading::after {
+    content: none;
+}
+
+.contact-table {
+    width: 100%;
+}
+
+.table-list {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+.table-list th {
+    font-weight: 400;
+    width: 150px;
+    text-align: left;
+    margin-right: 50px;
+}
+
+.table-list td {
+    width: 60%;
+    text-align: left;
+}
+
+input, textarea {  
+    margin-bottom: 18px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    background: #F1F1F1;
+    border: 1px #C5C5C5 solid;
+    border-radius: 4px;
+    width: 100%;
+    padding: 5px;
+}
+
+input[type="date"] {
+    background: #F1F1F1;
+    padding: 4px 25px;
+    border-radius: 4px;
+    cursor: text;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    height: 46px;
+}
+
+textarea {
+    height: 252px;
+}
+
+input[type="submit"] {
+    color: #fff;
+    background-color: #EDB0BF;
+    padding: 20px 8%;
+    font-size: 1.25rem;
+    border-radius: 7px;
+    line-height: 1;
+    margin-top: 25px;
+}
+
+input[type="submit"]:hover {
+    background: rgb(195, 135, 150);
+}
+
+/* スマホ向け（画面幅が600px以下） */
+@media (max-width: 600px) {
+    body {
+        padding-top: 75px;
+    }
+
+    .container {
+        overflow: hidden;
+    }
+
+    header {
+        height: 75px;
+        padding: 0 2vw;
+        width: 100vw;
+    }
+
+    .nav-wrapper {
+        width: 100vw;
+    }
+
+    /* 
+hamburger(ハンバーガーアイコン)
+=================================== */
+    .hamburger {
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        width: 34px;
+        height: 34px;
+        z-index: 300;
+    }
+
+    .hamburger__line {
+        position: absolute;
+        width: 34px;
+        height: 2px;
+        right: 0;
+        background-color: #333;
+        transition: all 0.5s;
+    }
+
+    .hamburger__line--1 {
+        top: 8px;
+    }
+      
+    .hamburger__line--2 {
+        top: 18px;
+    }
+      
+    .hamburger__line--3 {
+        top: 28px;
+    }
+  
+    /*ハンバーガーがクリックされたら*/
+    .open .hamburger__line--1 {
+        transform: rotate(-45deg);
+        top: 11px;
+        background-color: #fff;
+    }
+  
+    .open .hamburger__line--2 {
+        opacity: 0;
+    }
+  
+    .open .hamburger__line--3 {
+        transform: rotate(45deg);
+        top: 11px;
+        background-color: #fff;
+    }
+
+    /* 
+sp-nav(ナビ)
+=================================== */
+    .sp-nav {
+        position: fixed;
+        right: -100%;
+    /*ハンバーガーがクリックされる前はWindow右側に隠す*/
+        top: 0;
+        width: 100vw;
+    /* 出てくるスライドメニューの幅 */
+        height: 522px;
+        background-color: #50D5E0;
+        transition: all 0.5s;
+        z-index: 200;
+    /* メニューが多くなったらスクロールできるように */
+        overflow-y: auto;
+        text-align: center;
+    }
+
+    .sp-nav img {
+        width: 215px;
+        height: auto;
+    }
+
+    .sp-nav .logo-li {
+        margin-top: 80px;
+    }
+
+    .sp-nav .nav-1 {
+        margin-top: 40px;
+    }
+    .sp-nav .nav-li {
+        height: 40px;
+    }   
+
+    .sp-nav .nav-btn {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .sp-nav a{
+        line-height: 1;
+        color: #fff;
+        font-size: 1rem;
+        padding: 0px;
+    }
+
+    .main-nav span {
+        background: #fff;
+        color: #50D5E0;
+        font-size: 1rem;
+        padding: 10px 17px;
+        left: 0;
+    }
+
+    /*ハンバーガーがクリックされたら右からスライド*/
+    .open .sp-nav {
+        right: 0;
+    }
+
+    /* 
+    black-bg(ハンバーガーメニュー解除用bg)
+    =================================== */
+    .black-bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 5;
+        background-color: #000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+        z-index: 100;
+    }
+  
+  /*ハンバーガーメニューが開いたら表示*/
+    .open .black-bg {
+        opacity: 0.3;
+        visibility: visible;
+        z-index: 10;
+    }
+
+    .header__logo {
+        margin-top: 5px;
+        width: 215px;
+        height: auto;
+    }
+
+    .home-content {
+        background-image: url(../images/mainvisual-SP.jpg);
+        background-size: 200%;
+        background-position: 70% 90%;
+        height: 484px;
+    }
+
+    .home-content h2 {
+        font-size: 2.188rem;
+        writing-mode: vertical-rl;
+        top: 90px;
+        text-box-trim: trim-both;
+    }
+
+    .first {
+        left: 90px;
+    }
+
+    .second {
+        left: 30px;
+    }
+
+    .heading {
+        padding-top: 60px;
+        padding-bottom: 10px;
+        margin-bottom: 35px;
+    }
+
+    .heading::after{
+        width: 38px;
+    }
+
+    .features-one img {
+        max-width: 100vw;
+    }
+
+    .text-contents {
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 5px 0 60px;
+    }
+
+    .policy {
+        height: 650px;
+        text-align: center;
+    }
+
+    .policy .image {
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+
+    .policy b {
+        font-size: 1.25rem;
+        top: 20px;
+    }
+    
+    .policy p {
+        top: 30px;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    .notice span {
+        top: 10px;
+        padding: 0px 8px;
+        font-size: 0.938rem;
+        left: 2vw;
+    }
+
+    .notice-text {
+        margin: 15px 0 0;
+        padding: 2vw;
+    }
+
+    .notice-text h3 {
+        margin-bottom: 8px;
+        font-size: 1.125rem;
+    }
+
+    .notice-hr {
+        margin: 15px 0 20px;
+    }
+    
+    .notice-btn {
+        margin: 15px 5vw 0 0;
+    }
+    
+    .home-footer .logo {
+        margin-top: 100px;
+    }
+
+    .home-footer .footer-nav {
+        display: none;
+    }
+
+    .sns {
+        margin: 40px 0 50px;
+    }
+
+    .sns-icon {
+        margin: 0 14px;
+    }
+    
+    footer p {
+        font-size: 0.625rem;
+    }
+
+    .information-content {
+        background-size: cover;
+        background-position: center;
+        height: 245px;
+    }
+
+    .information-content h1 { 
+        font-size: 1.438rem;
+        top: 107px;
+        padding: 0 44px;
+    }
+
+    .information-content p {
+        font-size: 0.688rem;
+        top: 135px;
+        padding: 0 33px;
+    }
+
+    .breadcrumb {
+        font-size: 0.75rem;
+        right: 25px;
+        top: 5px;
+    }
+
+    .list li {
+        padding: 3vw 12vw;
+        margin: 50px 3px 0;
+        font-size: 1.063rem;
+    }
+    
+    .toothdecay {
+        height: 36rem;
+    }
+
+    .toothdecay .right {
+        margin: 0 auto;
+        max-width: 98vw;
+    }
+
+    .toothdecay .image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .toothdecay b {
+        font-size: 1.375rem;
+        top: 15px;
+    }
+    
+    .toothdecay p {
+        top: 30px;
+        padding: 0;
+    }
+    
+    .periodontaldisease {
+        height: 40.375rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .periodontaldisease .left {
+        margin: 15px auto 0;
+        max-width: 98vw;
+        order: 1;
+    }
+
+    .periodontaldisease b {
+        font-size: 1.375rem;
+    }
+    
+    .periodontaldisease p {
+        top: 15px;
+    }
+    
+    .periodontaldisease .image {
+        width: auto;
+        margin: 0 auto;
+    }
+
+    .footer2 .logo {
+        margin: 70px 0 -15px;
+    }
+    
+    .footer2 .footer-nav {
+        display: none;
+    }
+
+    .access-content {
+        background-size: cover;
+        background-position: center;
+        height: 245px;
+    }
+
+    .access-content h1 {
+        font-size: 1.438rem;
+        top: 107px;
+        padding: 0 20px;
+        width: 260px;
+    }
+    
+    .access-content p {
+        font-size: 0.688rem;
+        top: 135px;
+        padding: 0 30px;
+        width: 260px;
+    }
+
+    .access .image {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .access .right {
+        max-width: 98vw;
+        margin: 0 auto;
+    }
+    
+    .access b {
+        position: relative;
+        font-size: 1.125rem;
+        top: 15px;
+    }
+    
+    .access p {
+        top: 20px;
+        font-weight: 0.875rem;
+        margin-bottom: 25px;
+    }
+
+    .location-map {
+        margin-top: 50px;
+    }
+
+    iframe {
+        height: 402px;
+    }
+
+    .horizontal {
+        display: none;
+    }
+
+    .vertical {
+        text-align: center;
+        margin: 0 auto;
+        font-size: 1.125rem;
+        border-collapse: collapse;
+    }
+    
+    .vertical th {
+        padding: 5vw;
+        background-color: #E9F9FA;
+        color: #000;
+        font-weight: 500;
+    }
+
+    .vertical .day {
+        padding: 7vw 10vw;
+    }
+    
+    .vertical td {
+        font-size: 1.813rem;
+        font-weight: 500;
+        border: solid 1px #E9F9FA;
+        background-color: #F5FDFE;
+        color: #6DB1B7;
+    }
+
+    .reservation-content {
+        background-size: 135%;
+        background-position: 85%;
+        height: 245px;
+    }
+    
+    .reservation-content h1 { 
+        font-size: 1.438rem;
+        top: 107px;
+        padding: 0 2.3rem;
+    }
+    
+    .reservation-content p {
+        font-size: 0.688rem;
+        top: 135px;
+        padding: 0 2.3rem;
+    }
+
+    .inquiry-wrapper h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: 0;
+        margin: -20px 0 20px;
+    }
+
+    .contact-table {
+        margin-top: -10px;
+    }
+    
+    .table-list th {
+        font-size: 0.875rem;
+        max-width: 5.5rem;
+        margin-right: 5vw;
+    }
+    
+    .table-list td {
+        max-width: 16rem;
+    }
+    
+    input, textarea {  
+        margin-bottom: 23px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        border-radius: 3px;
+        max-width: 16rem;
+    }
+    
+    input[type="date"] {
+        padding: 4px 25px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+        height: 28px;
+    }
+    
+    textarea {
+        height: 152px;
+    }
+    
+    input[type="submit"] {
+        padding: 15px 10vw;
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+}
+
+/* タブレット向け（画面幅が601pxから900px） */
+@media (min-width: 601px) and (max-width: 900px) {
+
+    /* 
+    hamburger(ハンバーガーアイコン)
+    =================================== */
+    .hamburger {
+        margin-top: 5px;
+        position: absolute;
+        right: 15px;
+        top: 20px;
+        width: 34px;
+        height: 34px;
+        z-index: 300;
+    }
+
+    .hamburger__line {
+        position: absolute;
+        width: 34px;
+        height: 2px;
+        right: 0;
+        background-color: #333;
+        transition: all 0.5s;
+    }
+
+    .hamburger__line--1 {
+        top: 8px;
+    }
+  
+    .hamburger__line--2 {
+        top: 18px;
+    }   
+  
+    .hamburger__line--3 {
+        top: 28px;
+    }
+
+    /*ハンバーガーがクリックされたら*/
+    .open .hamburger__line--1 {
+        transform: rotate(-45deg);
+        top: 11px;
+        background-color: #fff;
+    }
+
+    .open .hamburger__line--2 {
+        opacity: 0;
+    }
+
+    .open .hamburger__line--3 {
+        transform: rotate(45deg);
+        top: 11px;
+        background-color: #fff;
+    }
+
+    /* 
+    sp-nav(ナビ)
+    =================================== */
+    .sp-nav {
+        position: fixed;
+        right: -100%;
+    /*ハンバーガーがクリックされる前はWindow右側に隠す*/
+        top: 0;
+        width: 430px;
+    /* 出てくるスライドメニューの幅 */
+        height: 522px;
+        background-color: #50D5E0;
+        transition: all 0.5s;
+        z-index: 200;
+    /* メニューが多くなったらスクロールできるように */
+        overflow-y: auto;
+        text-align: center;
+    }
+
+    .sp-nav img {
+        width: 215px;
+        height: auto;
+    }
+
+    .sp-nav .logo-li {
+        margin-top: 80px;
+    }
+
+    .sp-nav .nav-1 {
+        margin-top: 40px;
+    }
+    .sp-nav .nav-li {
+        height: 40px;
+    }   
+
+    .sp-nav .nav-btn {
+        margin-top: 40px;
+        margin-left: 0;
+    }
+
+    .sp-nav a{
+        line-height: 1;
+        color: #fff;
+        font-size: 1rem;
+        padding: 0px;
+    }
+
+    .main-nav span {
+        background: #fff;
+        color: #50D5E0;
+        font-size: 1rem;
+        padding: 10px 17px;
+        left: 0;
+    }
+
+    /*ハンバーガーがクリックされたら右からスライド*/
+    .open .sp-nav {
+        right: 0;
+    }
+
+    /* 
+    black-bg(ハンバーガーメニュー解除用bg)
+    =================================== */
+    .black-bg {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 5;
+        background-color: #000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s;
+        z-index: 100;
+    }
+
+    /*ハンバーガーメニューが開いたら表示*/
+    .open .black-bg {
+        opacity: 0.3;
+        visibility: visible;
+        z-index: 10;
+    }
+    
+    .home-content h2 {
+        font-size: 2.8rem;
+    }
+
+    .first {
+        top: 300px;
+        left: 8vw;
+    }
+    
+    .second {
+        top: 390px;
+        left: 8vw;
+    }
+
+    .features {
+        display: flex;
+        justify-content: center;
+        gap: 3vw;
+        padding: 0 2vw;
+    }
+
+    .policy {
+        height: 650px;
+        text-align: center;
+        padding: 0 2vw;
+    }
+
+    .policy .image {
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+
+    .policy b {
+        top: 15px;
+    }
+
+    .policy p {
+        display: inline-block;
+        margin: 0 auto;
+        text-align: justify;
+        top: 40px;
+    }
+
+    .notice span {
+        padding: 0px 12px;
+        font-size: 1rem;
+        top: 0;
+        left: 3vw;
+    }
+
+    .notice-text {
+        margin: 5px 10px 0;
+        padding: 2vw;
+    }
+
+    .notice-hr {
+        margin: 15px auto 20px;
+    }
+
+    .notice-btn {
+        margin-right: 30px;
+    }
+
+    .toothdecay {
+        display: flex;
+        justify-content: center;
+        gap: 3vw;
+    }
+
+    .toothdecay .right {
+        margin-top: -40px;
+    }
+
+    .periodontaldisease {
+        display: flex;
+        justify-content: center;
+        gap: 3vw;
+    }
+
+    .periodontaldisease .left {
+        margin-top: -30px;
+        max-width: 45vw;
+    }
+
+    .access-content h1 {
+        top: 165px;
+        width: 310px;
+    }
+    
+    .access-content p {
+        top: 200px;
+        width: 310px;
+    }
+
+    .access {
+        display: flex;
+        justify-content: center;
+        gap: 3vw;
+    }
+
+    .access .right {
+        max-width: 100vw;
+    }
+    
+    .horizontal .time {
+        padding: 0 2vw;
+    }
+    
+    .horizontal th, .horizontal td {
+        padding: 2vw 3vw;
+    }
+
+    .vertical {
+        display: none;
+    }
+
+    .table-list th {
+        max-width: 30vw;
+        margin-right: 5vw;
+    }
+    
+    .table-list td {
+        max-width: 50vw;
+    }
+    
+    input, textarea {  
+        margin-bottom: 23px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        max-width: 50vw;
+    }
+    }
+
+/* PC向け（画面幅が901px以上） */
+@media (min-width: 901px) {
+    .main-nav {
+        display: flex;
+        justify-content: end;
+    }
+
+    .logo-li, .nav-1{
+    display: none;
+    }
+
+    .nav-li {
+    margin: 0 ;
+    }
+
+    .main-nav a:hover {
+        color: #0bd;
+    }
+
+    .nav-btn {
+        margin-left: 30px;
+    }
+
+    .features {
+        display: flex;
+        justify-content: center;
+        gap: 90px;
+    }
+
+    .policy {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .toothdecay {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .periodontaldisease {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+    }
+
+    .access {
+        display: flex;
+        justify-content: center;
+    }
+
+    .vertical {
+        display: none;
+    }  
+}
