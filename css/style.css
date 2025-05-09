@@ -115,6 +115,7 @@ header {
     letter-spacing: .2rem;
     background-color: #fff;
     text-box-trim: trim-both;
+    line-height: 1.15;
 }
 
 .first {
